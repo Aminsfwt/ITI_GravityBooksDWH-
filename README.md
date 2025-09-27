@@ -113,7 +113,7 @@ This project contains SSIS packages for loading and transforming data into a sta
 - **status_id**: Status business key.
 
 ---
-https://github.com/Aminsfwt/ITI_GravityBooksDWH-/blob/main/GravityBookDWH/Project%20Output/GravietyBookDWH%20Modeling.png?raw=true
+(https://github.com/Aminsfwt/ITI_GravityBooksDWH-/blob/main/GravityBookDWH/Project%20Output/GravietyBookDWH%20Modeling.png?raw=true)
 ## Notes
 
 - All dimension tables use SCD2 (Slowly Changing Dimension Type 2) columns: `start_date`, `end_date`, and `is_current`.
