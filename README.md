@@ -23,6 +23,8 @@ This project contains SSIS packages for loading and transforming data into a sta
 - **end_date**: Row end date (SCD2).
 - **is_current**: Current row flag (SCD2).
 
+  ![SSIS](https://github.com/Aminsfwt/ITI_GravityBooksDWH-/blob/main/GravityBookDWH/Project%20Output/DimBook.PNG?raw=true)
+
 ### 2. DimAuthor
 - **Author_Key**: Surrogate key for the author.
 - **author_BK**: Business key for the author.
@@ -30,11 +32,17 @@ This project contains SSIS packages for loading and transforming data into a sta
 - **source_system_code**: Source system identifier.
 - **is_current**: Current row flag (SCD2).
 
+  ![SSIS](https://github.com/Aminsfwt/ITI_GravityBooksDWH-/blob/main/GravityBookDWH/Project%20Output/DimAuthor.PNG?raw=true)
+
+
+
 ### 3. DimBookAuthor (SubDimBookAuthor)
 - **bookAuthor_Key**: Surrogate key for the book-author relationship.
 - **BookId**: Book business key.
 - **author_BK**: Author business key.
 - **source_system_code**: Source system identifier.
+  
+![SSIS](https://github.com/Aminsfwt/ITI_GravityBooksDWH-/blob/main/GravityBookDWH/Project%20Output/DimBookAuthor.PNG?raw=true)
 
 ### 4. DimCustomer
 - **Customer_Key**: Surrogate key for the customer.
@@ -52,19 +60,11 @@ This project contains SSIS packages for loading and transforming data into a sta
 - **end_date**: Row end date (SCD2).
 - **is_current**: Current row flag (SCD2).
 
-### 5. DimCustOrder
-- **cust_order_SK**: Surrogate key for the customer order.
-- **OrderID**: Business key for the order.
-- **OrderDate**: Order date.
-- **CustomerID**: Customer business key.
-- **ShippingMethodID**: Shipping method business key.
-- **StatusId**: Status business key.
-- **source_system_code**: Source system identifier.
-- **start_date**: Row start date (SCD2).
-- **end_date**: Row end date (SCD2).
-- **is_current**: Current row flag (SCD2).
+![SSIS](https://github.com/Aminsfwt/ITI_GravityBooksDWH-/blob/main/GravityBookDWH/Project%20Output/DimCustomer.PNG?raw=true)
 
-### 6. DimShippingMethod
+
+
+### 5. DimShippingMethod
 - **ShipMethod_SK**: Surrogate key for the shipping method.
 - **method_BK**: Business key for the shipping method.
 - **MethodName**: Shipping method name.
@@ -73,7 +73,9 @@ This project contains SSIS packages for loading and transforming data into a sta
 - **end_date**: Row end date (SCD2).
 - **is_current**: Current row flag (SCD2).
 
-### 7. DimStatus
+  ![SSIS](https://github.com/Aminsfwt/ITI_GravityBooksDWH-/blob/main/GravityBookDWH/Project%20Output/DimShipping%20Method.PNG?raw=true)
+
+### 6. DimStatus
 - **status_SK**: Surrogate key for the status.
 - **StatusID_BK**: Business key for the status.
 - **StatusValue**: Status description.
@@ -82,10 +84,14 @@ This project contains SSIS packages for loading and transforming data into a sta
 - **end_date**: Row end date (SCD2).
 - **is_current**: Current row flag (SCD2).
 
-### 8. DimBridge (Book_Bridge)
+  ![SSIS](https://github.com/Aminsfwt/ITI_GravityBooksDWH-/blob/main/GravityBookDWH/Project%20Output/DimStatus.PNG?raw=true)
+
+### 7. DimBridge (Book_Bridge)
 - **boo_bridge_SK**: Surrogate key for the bridge table.
 - **book_BK**: Book business key.
 - **author_BK**: Author business key.
+
+  ![SSIS](https://github.com/Aminsfwt/ITI_GravityBooksDWH-/blob/main/GravityBookDWH/Project%20Output/DimBookBridge.PNG?raw=true)
 
 ---
 
@@ -99,6 +105,8 @@ This project contains SSIS packages for loading and transforming data into a sta
 - **order_date**: Date of order.
 - **source_system_code**: Source system identifier.
 
+  ![SSIS](https://github.com/Aminsfwt/ITI_GravityBooksDWH-/blob/main/GravityBookDWH/Project%20Output/FactBookPrice.PNG?raw=true)
+
 ### 2. FactTimeLine
 - **order_id**: Order business key.
 - **received**: Date order was received.
@@ -111,6 +119,8 @@ This project contains SSIS packages for loading and transforming data into a sta
 - **method_id**: Shipping method business key.
 - **cost**: Shipping cost.
 - **status_id**: Status business key.
+
+  ![SSIS](https://github.com/Aminsfwt/ITI_GravityBooksDWH-/blob/main/GravityBookDWH/Project%20Output/FactTimeLine.PNG?raw=true)
 
 ---
 ![Alt text](https://github.com/Aminsfwt/ITI_GravityBooksDWH-/blob/main/GravietyBookDWH%20Modeling.png?raw=true)
