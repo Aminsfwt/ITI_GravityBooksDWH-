@@ -1,9 +1,97 @@
-# GravityBookDWH ETL Project
+# GravityBook Data Warehouse ETL Project
 
-This project contains SSIS packages for loading and transforming data into a star-schema data warehouse for a book sales and library system. Below are the descriptions for each dimension and fact table, including all columns.
+### Project Overview:
+Welcome to the Gravity Books Sales ETL and Data Warehouse Project documentation. This initiative aims to transform the existing Gravity Books Sales database into a robust data warehouse, enabling advanced analytics and reporting capabilities. The project involves the use of Extract, Transform, Load (ETL) processes to migrate and transform data, and the implementation of SQL Server Integrated Services (SSIS) to extract data from OLTP Database, transform and load into OLAP galaxy-schema Data warehouse.
+
+Below are the descriptions for each dimension and fact table, including all columns.
 
 ---
+## Source Database Overview:
+Database Information:
+Database Type:
+  - Relational Database (Microsoft SQL Server). 
+  Technology Stack:
 
+  - Microsoft SQL Server (2019)
+    SQL Server Management Studio (SSMS) for database management.
+
+## Data Structure:
+#### Tables and Entities: 
+- data base [HERE](https://github.com/Aminsfwt/ITI_GravityBooksDWH-/tree/main/GravityBookDWH/GravityBookDB)
+- Entity Relationship Diagram ![ERD](https://github.com/Aminsfwt/ITI_GravityBooksDWH-/blob/main/GravityBookDWH/Project%20Output/db_erd.png)  
+
+  ## 1- author Table:
+    Purpose: Stores information about book authors.
+    
+    Fields:
+    
+    author_id: Unique identifier for the author.
+    author_name: Name of the author.
+    Constraints:
+    Primary Key: author_id
+    
+  ## 2- publisher Table:  
+    Purpose: Stores information about book publishers.
+    
+    Fields:
+    publisher_id: Unique identifier for the publisher.
+    publisher_name: Name of the publisher.
+    Constraints:
+    Primary Key: publisher_id
+    
+  ## 3- book_language Table:
+
+    Purpose: Stores information about book languages.
+    
+    Fields:
+    language_id: Unique identifier for the language.
+    language_code: Code representing the language.
+    language_name: Name of the language.
+    Constraints:
+    Primary Key: language_id
+    
+  ## 4- book Table:
+
+    Purpose: Stores information about books.
+    
+    Fields:
+    book_id: Unique identifier for the book.
+    title: Title of the book.
+    isbn13: ISBN-13 code of the book.
+    language_id: Foreign key referencing book_language table.
+    num_pages: Number of pages in the book.
+    publication_date: Date when the book was published.
+    publisher_id: Foreign key referencing publisher table.
+    Constraints:
+    Primary Key: book_id
+    Foreign Keys: language_id, publisher_id
+
+  ## 5- book_author Table:
+
+Purpose: Represents the many-to-many relationship between books and authors.
+
+    Fields:
+    book_id: Foreign key referencing book table.
+    author_id: Foreign key referencing author table.
+    Constraints:
+    Primary Key: Composite key (book_id, author_id)
+    Foreign Keys: book_id, author_id
+
+#### Primary Entities and Relationships:
+The data structure in the gravity_books database comprises key tables, each representing a specific entity such as authors, publishers, book languages, books, and their relationships.
+
+#### Author-Book Relationship:
+
+The book_author table establishes a many-to-many relationship between books and authors.
+Book-Publisher Relationship:
+
+The book table includes a foreign key (publisher_id) referencing the publisher table, establishing a relationship between books and publishers.    
+
+## Data Extraction Methods:
+#### Extraction Tools:
+SQL Server Integration Services (SSIS) for data extraction.
+
+- Data Modeling ![modeling](https://github.com/Aminsfwt/ITI_GravityBooksDWH-/blob/main/GravityBookDWH/Project%20Output/GravietyBookDWH%20Modeling.png)
 ## Dimensions
 
 ### 1. DimBook
