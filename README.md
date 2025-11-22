@@ -92,7 +92,8 @@ The book table includes a foreign key (publisher_id) referencing the publisher t
 SQL Server Integration Services (SSIS) for data extraction.
 
 - Data Modeling ![modeling](https://github.com/Aminsfwt/ITI_GravityBooksDWH-/blob/main/GravityBookDWH/Project%20Output/GravietyBookDWH%20Modeling.png)
-## Dimensions
+
+## Dimensions SSIS Packages:
 
 ### 1. DimBook
 - **book_Key**: Surrogate key for the book.
@@ -212,6 +213,13 @@ SQL Server Integration Services (SSIS) for data extraction.
 
 ---
 ![Alt text](https://github.com/Aminsfwt/ITI_GravityBooksDWH-/blob/main/GravietyBookDWH%20Modeling.png?raw=true)
+
+
+#### Data Lineage
+ - By supporting Excel for data mapping, the Gravity Books data warehouse promotes transparency, collaboration, and efficiency in managing the mapping process.[excel](https://github.com/Aminsfwt/ITI_GravityBooksDWH-/blob/main/GravityBookDWH/Graviety%20Books%20DWH.xlsx)
+
+   
+   ![lineage](https://github.com/Aminsfwt/ITI_GravityBooksDWH-/blob/main/GravityBookDWH/Project%20Output/fact_orders_lineage.png)
 
 ## Notes
 
